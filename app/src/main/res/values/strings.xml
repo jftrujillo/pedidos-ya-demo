@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PedidosYaDemo</string>
+    <string name="label_lading_screen">Obteniendo ticket de sesión</string>
+    <string name="error_token">Error obteniendo token de sesion</string>
+</resources>
