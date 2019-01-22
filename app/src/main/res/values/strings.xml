@@ -2,4 +2,8 @@
     <string name="app_name">PedidosYaDemo</string>
     <string name="label_lading_screen">Obteniendo ticket de sesión</string>
     <string name="error_token">Error obteniendo token de sesion</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps_example">Map</string>
 </resources>

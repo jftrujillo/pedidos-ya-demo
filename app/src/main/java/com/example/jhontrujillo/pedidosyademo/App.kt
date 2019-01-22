@@ -1,6 +1,7 @@
 package com.example.jhontrujillo.pedidosyademo
 
 import android.app.Application
+import android.support.v4.content.ContextCompat
 import com.example.jhontrujillo.pedidosyademo.di.AppComponent
 import com.example.jhontrujillo.pedidosyademo.di.AppModule
 import com.example.jhontrujillo.pedidosyademo.di.DaggerAppComponent

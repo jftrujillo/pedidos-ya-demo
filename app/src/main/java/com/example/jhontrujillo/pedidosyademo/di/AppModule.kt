@@ -2,7 +2,10 @@ package com.example.jhontrujillo.pedidosyademo.di
 
 import android.app.Application
 import android.content.Context
-import com.example.jhontrujillo.pedidosyademo.net.ApiClient
+import android.location.LocationManager
+import com.example.jhontrujillo.pedidosyademo.net.apiClient.TokenClient
+import com.example.jhontrujillo.pedidosyademo.util.BASE_URL
+import com.example.jhontrujillo.pedidosyademo.util.SHARED_PREFERENCE_NAME
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
@@ -13,9 +16,6 @@ import javax.inject.Singleton
 @Module
 class AppModule(val app: Application) {
 
-    companion object {
-        const val BASE_URL = "http://stg-api.pedidosya.com/public/v1/"
-    }
 
     @Singleton
     @Provides
@@ -32,5 +32,13 @@ class AppModule(val app: Application) {
 
     @Provides
     @Singleton
-    fun provideApiClient(retrofit: Retrofit) : ApiClient = retrofit.create(ApiClient::class.java)
+    fun provideTokenClient(retrofit: Retrofit) : TokenClient = retrofit.create(TokenClient::class.java)
+
+    @Provides
+    @Singleton
+    fun provideSharedPrefferences(context: Context) = context.getSharedPreferences(SHARED_PREFERENCE_NAME, 0)
+
+    @Provides
+    @Singleton
+    fun provideLocationManager (context: Context) : LocationManager = context.getSystemService(Context.LOCATION_SERVICE) as LocationManager
 }

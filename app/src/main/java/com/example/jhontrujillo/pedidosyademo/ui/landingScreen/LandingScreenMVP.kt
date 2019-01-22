@@ -1,13 +1,13 @@
 package com.example.jhontrujillo.pedidosyademo.ui.landingScreen
 
 import com.example.jhontrujillo.pedidosyademo.ui.BasePresenter
+import com.example.jhontrujillo.pedidosyademo.ui.BaseView
 
 interface LandingScreenMVP {
 
-    interface View : BaseView{
+    interface View : BaseView {
         fun startViewProgress()
         fun stopViewProgress()
-        fun showErrorBanner()
     }
 
     interface Presenter : BasePresenter
