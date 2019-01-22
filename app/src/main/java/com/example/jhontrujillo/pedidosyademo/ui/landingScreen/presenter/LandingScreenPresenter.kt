@@ -39,7 +39,8 @@ class LandingScreenPresenter @Inject constructor(val tokenClient: TokenClient, v
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(
-                {token ->
+                {
+                    token ->
                     val sharedPreferences = context.getSharedPreferences(SHARED_PREFERENCE_NAME, 0)
                     sharedPreferences.edit().putString(TOKEN_PREFERENCE_KEY, token.accessToken).apply()
                     view.stopViewProgress()

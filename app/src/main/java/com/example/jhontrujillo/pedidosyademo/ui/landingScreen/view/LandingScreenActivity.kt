@@ -23,7 +23,7 @@ class LandingScreenActivity : AppCompatActivity(), LandingScreenMVP.View {
 
 
     @Inject
-    lateinit var presenter: LandingScreenPresenter
+    lateinit var presenter: LandingScreenMVP.Presenter
 
     private val FINE_POSITION_REQUEST = 100
 
